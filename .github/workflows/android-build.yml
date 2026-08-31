@@ -25,9 +25,6 @@ jobs:
         uses: gradle/actions/setup-gradle@v4
         with:
           gradle-version: '8.10'
-
-      - name: Grant execute permission
-        run: chmod +x gradlew
-
+      
       - name: Build APK
-        run: ./gradlew assembleDebug
+        run: gradle assembleDebug
